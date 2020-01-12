@@ -12,6 +12,9 @@ state = {
     cart: [],
     modalOpen: false,
     modalProduct: detailProduct,
+    cartSubtotal: 0,
+    cartTax: 0,
+    cartTotal: 0
 }
 
 componentDidMount(){
@@ -73,6 +76,21 @@ closeModal = id => {
     })
 }
 
+increment = (id) => {
+    console.log("this is increment");
+}
+
+decrement = (id) => {
+    console.log("this is decrement");
+}
+
+removeItem = (id) => {
+    console.log("this is remove");
+}
+
+clearAll = () => {
+    console.log(`this is clear All`);
+}
     render() { 
         return (
             <ProductContext.Provider 
@@ -81,7 +99,11 @@ closeModal = id => {
                 handleDetail: this.handleDetail,
                 addToCart: this.addToCart,
                 openModal:this.openModal,
-                closeModal:this.closeModal 
+                closeModal:this.closeModal,
+                increment: this.increment,
+                decrement: this.decrement,
+                removeItem: this.removeItem,
+                clearAll: this.clearAll 
             }}>
                 {this.props.children}
             </ProductContext.Provider>
