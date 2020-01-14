@@ -2,7 +2,7 @@ export const storeProducts = [
     {
         id:1,
         title: "Google Pixel - Black",
-        img: "img/logo512.png",
+        img: "https://source.unsplash.com/random/201x200",
         price: 15,
         company: "GOOGLE",
         info: 
